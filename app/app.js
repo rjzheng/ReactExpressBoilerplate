@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Route, Router, IndexRoute, browserHistory } from 'react-router';
+import Main from 'Main';
 
 ReactDOM.render(
-  <h1>Boilerplate app!</h1>,
+  <Router history={browserHistory}>
+    <Route path="/" component={Main}>
+    </Route>
+  </Router>,
   document.getElementById('app')
 );
