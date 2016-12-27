@@ -9,7 +9,7 @@ module.exports = {
     alias: {
       'Main': 'app/components/Main.js'
     },
-    extensions: ['', '.js', '.jsx', 'json']
+    extensions: ['', '.js', '.jsx', '.json']
   },
   module: {
     loaders: [
@@ -20,6 +20,12 @@ module.exports = {
         },
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
+      }, {
+        test: /\.css$/,
+        loaders: ["style", "css"]
+      }, {
+        test: /\.json$/,
+        loader: "json"
       }
     ]
   }
