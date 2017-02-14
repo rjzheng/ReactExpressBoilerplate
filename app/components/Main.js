@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Home from 'Home';
 
-export default (props) => {
-  return (
-    <div>
+class Main extends Component {
+
+  // Set initial state
+  constructor(props) {
+		super(props);
+
+	}
+
+  render () {
+    return (
       <div>
         <div>
-          <h1>React Webpack Express Boilerplate Project</h1>
-          {props.children}
+          <Home />
         </div>
+        {this.props.children}
       </div>
-    </div>
-  );
+    );
+  };
 };
+
+export default Main;
