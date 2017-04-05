@@ -8,10 +8,11 @@ module.exports = {
     root: __dirname,
     modulesDirectories: [
       'node_modules',
-      './app/components'
+      './app/components',
+      './app/store',
+      './app/reducers'
     ],
     alias: {
-      'Main': 'app/components/Main.js'
     },
     extensions: ['', '.js', '.jsx', '.json']
   },
